@@ -1,6 +1,17 @@
 # `0bda:0811 Realtek Semiconductor Corp.` USB无线网卡Linux驱动
+ 
 
 针对 Ubuntu 18.04(LTS) 的安装，亲测可用，在此贡献出来。
+
+0. 安装`dkms`、`linux-headers`:
+
+
+    ```
+    $sudo apt update
+    $sudo apt full-upgrade
+    $sudo apt install dkms linux-headers-$(unmae -r)
+
+    ```
 
 1. `git clone git@github.com:gnu4cn/rtl8812au`
 
