@@ -1,6 +1,6 @@
-# `Bus 002 Device 004: ID 0bda:0811 Realtek Semiconductor Corp.` USB无线网卡Linux驱动
+# `0bda:0811 Realtek Semiconductor Corp.` USB无线网卡Linux驱动
 
-针对 Ubuntu 18.04(LTS) 的安装，请测可用。
+针对 Ubuntu 18.04(LTS) 的安装，亲测可用，在此贡献出来。
 
 1. `git clone git@github.com:gnu4cn/rtl8812au`
 
