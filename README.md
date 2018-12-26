@@ -75,9 +75,7 @@ mkdir /usr/src/${DRV_NAME}-${DRV_VERSION}
 cp -r . /usr/src/${DRV_NAME}-${DRV_VERSION}
 ```
  
-
 经过测试，GitHub上的牛人给出的驱动兼容性挺好，Ubuntu、Elementary、Fedora 都可以用，还挺稳定的。
---------------------- 
 作者：zzzzllll2006 
 来源：CSDN 
 原文：https://blog.csdn.net/zzzzllll2006/article/details/82024679 
