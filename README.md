@@ -10,7 +10,6 @@
     $sudo apt update
     $sudo apt full-upgrade
     $sudo apt install dkms linux-headers-$(unmae -r)
-
     ```
 
 1. `git clone git@github.com:gnu4cn/rtl8812au`
