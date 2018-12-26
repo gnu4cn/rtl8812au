@@ -74,11 +74,15 @@ cp -r ../${DRV_DIR} /usr/src/${DRV_NAME}-${DRV_VERSION}
 mkdir /usr/src/${DRV_NAME}-${DRV_VERSION}
 cp -r . /usr/src/${DRV_NAME}-${DRV_VERSION}
 ```
- 
+
 经过测试，GitHub上的牛人给出的驱动兼容性挺好，Ubuntu、Elementary、Fedora 都可以用，还挺稳定的。
+
 作者：zzzzllll2006 
+
 来源：CSDN 
+
 原文：https://blog.csdn.net/zzzzllll2006/article/details/82024679 
+
 版权声明：本文为博主原创文章，转载请附上博文链接！
 
 # Realtek RTL8812AU Driver
