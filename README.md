@@ -1,3 +1,15 @@
+# `Bus 002 Device 004: ID 0bda:0811 Realtek Semiconductor Corp.` USB无线网卡Linux驱动
+
+针对 Ubuntu 18.04(LTS) 的安装，请测可用。
+
+1. `git clone git@github.com:gnu4cn/rtl8812au`
+
+2. `cd rtl8812au`
+
+3. `sudo ./dkms-install.sh`
+
+4. `reboot`
+
 # RTL8811AU无线网卡linux驱动安装笔记（Fedora、Ubuntu）
 
 > 原文：[https://blog.csdn.net/zzzzllll2006/article/details/82024679](https://blog.csdn.net/zzzzllll2006/article/details/82024679)
@@ -10,12 +22,16 @@ USB网卡自带了一张光盘，光盘里有Linux下的驱动源码，还有安
 于是网上找了不少第三方的驱动，但无一例外，编译失败或者是无法驱动。最后找到了几篇比较有参考意义的文章，折腾了一下，重要可以用了。参考文章如下：
 
 参考1：[https://blog.csdn.net/jerry_sc/article/details/76407673](https://blog.csdn.net/jerry_sc/article/details/76407673)
+
+
 参考2：[https://dustymabe.com/2016/01/24/802.11ac-on-linux-with-netgear-a6100-rtl8811au-usb-adapter/](https://dustymabe.com/2016/01/24/802.11ac-on-linux-with-netgear-a6100-rtl8811au-usb-adapter/)
+
+
 参考3：[https://github.com/paspro/rtl8812au](https://github.com/paspro/rtl8812au)
 
 我的编译、安装步骤主要参考 [https://blog.csdn.net/jerry_sc/article/details/76407673](https://blog.csdn.net/jerry_sc/article/details/76407673)，并做部分修改。
 
-1.首先，升级系统，安装内核头文件
+1. 首先，升级系统，安装内核头文件
 
 Ubuntu下命令行如下（我用的Elementary，基于Ubuntu，所以操作一样）：
 
@@ -33,10 +49,10 @@ Fedora下相应的命令是：
 # systemctl enable dkms
 ```
 
-2.去GitHub下载驱动源码。下载 [https://github.com/paspro/rtl8812au](https://github.com/paspro/rtl8812au)  （已失效）提供的源码 `v5.1.5` 版本，只有这个版本亲测可用，其他版本都有问题！！！你可以安装 `git` 命令，也可以在网页上下载，都行。虽然源码显示的是 `RTL8812AU` 型号无线网卡的驱动，但 `RTL8811AU` 也一样可以用。CSDN 上我也放了一份： [https://download.csdn.net/download/zzzzllll2006/10625455](https://download.csdn.net/download/zzzzllll2006/10625455)。
+2. 去GitHub下载驱动源码。下载 [https://github.com/paspro/rtl8812au](https://github.com/paspro/rtl8812au)  （已失效）提供的源码 `v5.1.5` 版本，只有这个版本亲测可用，其他版本都有问题！！！你可以安装 `git` 命令，也可以在网页上下载，都行。虽然源码显示的是 `RTL8812AU` 型号无线网卡的驱动，但 `RTL8811AU` 也一样可以用。CSDN 上我也放了一份： [https://download.csdn.net/download/zzzzllll2006/10625455](https://download.csdn.net/download/zzzzllll2006/10625455)。
 
 
-3.编译安装驱动。下载下来的源码里有个文件 `dkms-install.sh`，本以为直接执行脚本，就完成了，可是却出现了多个奇怪的错误，仔细检查发现，原来是脚本作者在拷贝驱动源文件的时候写错了路径，修改一下就OK了。
+3. 编译安装驱动。下载下来的源码里有个文件 `dkms-install.sh`，本以为直接执行脚本，就完成了，可是却出现了多个奇怪的错误，仔细检查发现，原来是脚本作者在拷贝驱动源文件的时候写错了路径，修改一下就OK了。
 
 ```
 cp -r ../${DRV_DIR} /usr/src/${DRV_NAME}-${DRV_VERSION}
